@@ -1,0 +1,284 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+h1{
+    text-align: center;
+    color: green;
+    padding: 20px;
+}
+nav{
+    background-color: lime;
+    display: flex;
+    place-items: center;
+}
+nav ul{
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    padding: 30px;
+    text-decoration: none;
+    color: beige;
+    transition: 0.2s ease-in;
+}
+nav ul a:hover{
+    background-color: rgb(3, 17, 17);
+    color: rgb(220, 202, 202);
+
+}
+nav .icon i{
+    font-size: 18px;
+    color: black;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.items{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 30px 20px;
+    grid-column-gap:20px;
+    grid-row-gap: 30px;
+}
+.item img{
+    width:100%;
+    height:90%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+.item img:hover{
+    transform: scale(1.04);
+}
+.item h4{
+    padding: 5px;
+    text-align: center;
+}
+.item button{
+    padding: 5px 30px;
+    border: none;
+    outline: none;
+    background-attachment: rgb(69, 2, 2);
+    color: blue;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+    transition: 0.2s all;
+}
+.item button:hover{
+    transform: scale(1.08);
+}
+@media  screen and (max-width:1000px){
+    .items{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media  screen and (max-width:768px){
+    .items{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+/*review*/
+
+.review{
+    width:100%;
+    height: 100vh;
+    padding: 70px 0;
+}
+.review h1{
+    font-size: 55px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.review h1 span{
+    margin-left: 15px;
+    color: yellow;
+    font-family: mv boli;
+}
+.review h1 span::after{
+    content: '';
+    width: 100%;
+    height:2px;
+    background: yellow;
+    position: relative;
+    bottom: 15px;
+    display: block;
+}
+.review .review_box{
+    width: 95%;
+    margin: 70px auto;
+    display: flex;
+}
+.review .review_box .review_card{
+    width: 350px;
+    height: 485px;
+    box-shadow: 0 2px 8px blueviolet;
+    border-radius: 8px;
+    padding: 8px 20px;
+    margin: 0 8px;
+
+}
+.review .review_box .review_card .review_profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition:0.3s;
+}
+.review .review_box .review_card .review_profile img{
+    width: 188px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 5px solid plum;
+}
+.review .review_box .review_card .review_text{
+    text-align: center;
+}
+.review .review_box .review_card .review_text .name{
+    color: black;
+    transition: 0.3s;
+}
+.review .review_box .review_card:hover .review_text{
+    transform: translate(-50px);
+}
+.review .review_box .review_card .review_text .review_icon{
+    color: yellow;
+    transition: 0.3s;
+}
+.review .review_box .review_card:hover .review_text .review_icon{
+    transform: translate(-30px);
+}
+.review .review_box .review_card .review_text .review_social{
+    margin: 5px 1px;
+    font-size: 15px;
+    opacity: 1;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.review .review_box .review_card:hover .review_text .review_social i{
+    opacity: 1;
+    transform: translatey(-8px);
+}
+.review .review_box .review_card .review_text p{
+    text-align: center;
+    line-height: 22px;
+    transition: 0.3s;
+}
+.review .review_box .review_card:hover .review_text p{
+    margin-top: 5px;
+}
+.order h1 span{
+    color: yellow;
+    margin-right: 15px;
+    font-family: mv boli;
+}
+.order h1 span::after{
+    content: '';
+    width: 100%;
+    height:2px;
+    background: yellow;
+    display: block;
+    position: relative;
+    bottom: 15px;
+}
+.order .order_main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.order.order_main.order_image img{
+    width: 600px;
+}
+.order.order_main form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:0 10px;
+}
+.order.order_main form .input p{
+    line-height:25px;
+}
+.order.order_main form .input{
+    margin:5px;
+}
+.order.order_main form .input input{
+    width: 300p0x;
+    height: 35px;
+    padding: 0 10px;
+    border: 2px solid white;
+    background:whitesmoke;
+    outline: none;
+    border-radius: 3px;
+}
+.order.order_main form .input input:focus{
+    border: 2px solid yellow;
+}
+.order.order_main form .order_btn{
+    padding: 10px 0;
+    background: yellow;
+    color: white;
+    width: 40%;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+}
+/*footer*/
+footer{
+    width: 100%;
+    padding: 30px 0 0 20px;
+    background: pink;
+}
+footer .footer_main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+footer.footer_main .footer_tag{
+    text-align: center;
+}
+footer .footer_main .footer_tag h2{
+    color: black;
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+footer .footer_main.footer_tag p{
+    margin: 10px 0;
+}
+footer.footer_main.footer_tag i{
+    margin: 0 5px;
+    cursor: pointer;
+}
+footer .footer_main.footer_tag i:hover{
+    color: yellow;
+}
+footer.end{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+footer.end span{
+    color: yellow;
+    margin-left: 10px;
+}
+::-webkit-scrollbar{
+    width:13px;
+}
+::-webkit-scrollbar-track{
+    border-radius: 15px;
+    box-shadow: inset 0 0 5px black;
+}
+
+::-webkit-scrollbar-thumb{
+    background: yellow;
+    border-radius: 15px;
+}
+
+
